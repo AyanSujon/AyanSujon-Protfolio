@@ -240,10 +240,31 @@ article.active{
   border-radius: 3px;
 }
 
+.has-scrollbar::-webkit-scrollbar{
+  width: 5px;  /* for Vertical Scrollbar*/
+  height: 5px;  /* for Horizontal Scrollbar*/
+}
+.has-scrollbar::-webkit-scrollbar-track{
+    background: var(--onyx);
+    border-radius: 5px;
+}
 
+.has-scrollbar::-webkit-scrollbar-thumb{
+  background: var(--orange-yellow-crayola);
+  border-radius: 5px;
+}
+.has-scrollbar::-webkit-scrollbar-button{ width: 20px; }
 
+.content-card{
+  position: relative;
+  background: var(--border-gradient-onyx);
+  padding: 15px;
+  padding-top: 45px;
+  border-radius: 14px;
+  box-shadow: var(--shadow-2);
+  z-index: 1;
 
-
+}
 
 
 
@@ -478,10 +499,6 @@ article.active{
 
 
 
-
-
-
-
 /*-----------------------------------*\
   #MAIN
 \*-----------------------------------*/
@@ -489,5 +506,51 @@ main{
     margin: 15px 12px;
     margin-bottom: 75px;
     min-width: 259px;
-
 }
+
+/* ===================== */
+/* testimonials */
+/* ===================== */
+.testimonials{ margin-bottom: 30px; }
+.testimonials-title{ margin-bottom: 20px; }
+.testimonials-item{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+  margin: 0 -15px;
+  padding: 25px 15px;
+  padding-bottom: 35px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline mandatory;
+}
+.testimonials-item{
+  min-height: 100%;
+  scroll-snap-align: center;
+}
+.testimonials-avatar-box{
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(15px -25px);
+  background: var(--bg-gradient-onyx);
+  border-radius: 14px;
+  box-shadow: var(--shadow-1);
+}
+.testimonials-item-title{ margin-bottom: 7px; }
+
+.testimonials-text{
+  color: var(--light-gray);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+  display: -webkit-box;
+  line-clamp: 4;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* 56 min videos watched */
